@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    var defaultTime:Double = 300
     var timeFrom:Double = 300
     var timer:Timer = Timer()
     var isTimerRunning = false
@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var countDownLabel: UILabel!
     
+    @IBOutlet var timePicker: TimePicker!
     
     // MARK: - Load
     override func viewDidLoad() {
@@ -38,8 +39,14 @@ class ViewController: UIViewController {
             startButton.isEnabled = false;
         }
     }
+    @IBAction func forceTime(_ sender: Any) {
+        timeFrom = timePicker.getTime()
+        startTimeInterval = Date.timeIntervalSinceReferenceDate
+        countDownLabel.text = timeString(time: TimeInterval(timeFrom))
+    }
     @IBAction func resetTimer(_ sender: Any) {
         endTimer()
+        timeFrom = defaultTime
         countDownLabel.text = timeString(time: TimeInterval(timeFrom))
     }
     

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,22 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yd-4Y-eoK">
-                                <rect key="frame" x="175" y="282" width="129" height="103"/>
-                                <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UaH-5N-ycc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00.000" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6J-oo-gqd">
-                                <rect key="frame" x="0.0" y="48" width="320" height="84"/>
+                                <rect key="frame" x="27.5" y="50" width="320" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="2WO-MA-9Zk"/>
                                 </constraints>
@@ -42,61 +31,81 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHq-Rw-XyV">
-                                <rect key="frame" x="26" y="282" width="129" height="103"/>
-                                <color key="backgroundColor" red="0.0" green="0.94901960784313721" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="AoS-S0-CYO"/>
-                                    <constraint firstAttribute="height" constant="103" id="oMr-FF-FHx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x6D-PV-JU4"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C5g-Kl-4t1">
-                                <rect key="frame" x="26" y="405" width="61" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hH8-hj-xCi">
+                                <rect key="frame" x="0.0" y="401" width="375" height="266"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALg-2l-4um">
-                                        <rect key="frame" x="0.0" y="0.0" width="61" height="30"/>
-                                        <state key="normal" title="Set Time"/>
+                                    <pickerView contentMode="scaleToFill" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="5iR-KH-wm9" customClass="TimePicker" customModule="SailStarter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALg-2l-4um">
+                                        <rect key="frame" x="0.0" y="216" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5HW-fH-4f2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <state key="normal" title="Set Time">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="forceTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRS-Ek-6ZH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iR-KH-wm9" customClass="TimePicker" customModule="SailStarter" customModuleProvider="target">
-                                <rect key="frame" x="27" y="393" width="277" height="175"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="L1B-Ug-TIx"/>
-                                    <constraint firstAttribute="width" constant="277" id="uNM-Gh-AcS"/>
-                                </constraints>
-                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LZe-Ex-bfc" userLabel="Control buttons">
+                                <rect key="frame" x="16" y="194" width="343" height="103"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHq-Rw-XyV">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="103"/>
+                                        <color key="backgroundColor" red="0.0" green="0.94901960784313721" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="103" id="oMr-FF-FHx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x6D-PV-JU4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yd-4Y-eoK">
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="103"/>
+                                        <color key="backgroundColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UaH-5N-ycc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0yd-4Y-eoK" firstAttribute="centerY" secondItem="BHq-Rw-XyV" secondAttribute="centerY" id="1m5-Ce-jd0"/>
-                            <constraint firstItem="j6J-oo-gqd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="341-gH-0Td"/>
-                            <constraint firstItem="BHq-Rw-XyV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="262" id="E9J-HR-AP1"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5iR-KH-wm9" secondAttribute="bottom" id="GEt-96-aNk"/>
-                            <constraint firstItem="0yd-4Y-eoK" firstAttribute="width" secondItem="BHq-Rw-XyV" secondAttribute="width" id="GiN-JL-mfX"/>
-                            <constraint firstItem="j6J-oo-gqd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="IHI-b9-zMY"/>
-                            <constraint firstItem="5iR-KH-wm9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KFP-j8-nck"/>
-                            <constraint firstItem="0yd-4Y-eoK" firstAttribute="height" secondItem="BHq-Rw-XyV" secondAttribute="height" id="brT-VE-U26"/>
-                            <constraint firstItem="0yd-4Y-eoK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="f3l-XT-QAQ"/>
-                            <constraint firstItem="BHq-Rw-XyV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="rP7-Hi-YE6"/>
+                            <constraint firstAttribute="trailing" secondItem="hH8-hj-xCi" secondAttribute="trailing" id="GzZ-ZZ-svt"/>
+                            <constraint firstItem="hH8-hj-xCi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RhZ-bW-DWH"/>
+                            <constraint firstItem="LZe-Ex-bfc" firstAttribute="top" secondItem="j6J-oo-gqd" secondAttribute="bottom" constant="60" id="S4u-Dp-6d5"/>
+                            <constraint firstItem="LZe-Ex-bfc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Xnp-2Z-lK4"/>
+                            <constraint firstItem="hH8-hj-xCi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dbL-xi-iyM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LZe-Ex-bfc" secondAttribute="trailing" id="hP9-nP-on9"/>
+                            <constraint firstItem="j6J-oo-gqd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pbz-Wc-j24"/>
+                            <constraint firstItem="j6J-oo-gqd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="wPc-CD-6uZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hH8-hj-xCi" secondAttribute="bottom" id="zlQ-Y4-Dsb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="countDownLabel" destination="j6J-oo-gqd" id="GcH-Ct-GD4"/>
                         <outlet property="startButton" destination="BHq-Rw-XyV" id="6oB-bb-Ts2"/>
+                        <outlet property="timePicker" destination="5iR-KH-wm9" id="YtO-S6-2Rx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.5" y="36.971830985915496"/>
+            <point key="canvasLocation" x="36" y="36.431784107946029"/>
         </scene>
     </scenes>
 </document>

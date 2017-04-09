@@ -15,7 +15,9 @@ class TimePicker: UIPickerView, UIPickerViewDelegate {
     
     let minutes = Array(0...5)
     let seconds = [0,15,30,45]
-
+    var selectedMinutes = 0
+    var selectedSeconds = 0
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         doinit()
@@ -60,6 +62,18 @@ class TimePicker: UIPickerView, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("picked \(row) + \(component)")
+        //print("picked \(row) + \(component)")
+        if component == 0 {
+            selectedMinutes = row
+        } else {
+            
+            selectedSeconds = row
+        }
+    }
+    func getTime()-> Double
+    {
+        let selected:Double = Double(minutes[selectedMinutes]*60 + seconds[selectedSeconds])
+        print("\(selected) \(minutes[selectedMinutes]) \(seconds[selectedSeconds])")
+        return selected
     }
 }
