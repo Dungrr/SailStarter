@@ -14,6 +14,7 @@
 		5AD4BA281E9968A500D62D9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD4BA261E9968A500D62D9C /* LaunchScreen.storyboard */; };
 		5AD4BA331E9968A500D62D9C /* SailStarterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4BA321E9968A500D62D9C /* SailStarterTests.swift */; };
 		5AD4BA3E1E9968A500D62D9C /* SailStarterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4BA3D1E9968A500D62D9C /* SailStarterUITests.swift */; };
+		5AD4BA4C1E99B5ED00D62D9C /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4BA4B1E99B5ED00D62D9C /* TimePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5AD4BA391E9968A500D62D9C /* SailStarterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SailStarterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD4BA3D1E9968A500D62D9C /* SailStarterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SailStarterUITests.swift; sourceTree = "<group>"; };
 		5AD4BA3F1E9968A500D62D9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD4BA4B1E99B5ED00D62D9C /* TimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				5AD4BA1D1E9968A500D62D9C /* AppDelegate.swift */,
 				5AD4BA1F1E9968A500D62D9C /* ViewController.swift */,
+				5AD4BA4B1E99B5ED00D62D9C /* TimePicker.swift */,
 				5AD4BA211E9968A500D62D9C /* Main.storyboard */,
 				5AD4BA241E9968A500D62D9C /* Assets.xcassets */,
 				5AD4BA261E9968A500D62D9C /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD4BA201E9968A500D62D9C /* ViewController.swift in Sources */,
+				5AD4BA4C1E99B5ED00D62D9C /* TimePicker.swift in Sources */,
 				5AD4BA1E1E9968A500D62D9C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
