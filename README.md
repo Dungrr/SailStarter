@@ -1,4 +1,4 @@
 # SailStarter
-Swift iOS Timer for starting Sailing races
+Swift iOS Timer for starting Sailing races.
 
-asdf
+Currently this is only a simple timer with the ability to quickly select a different time if you miss the first signal.
